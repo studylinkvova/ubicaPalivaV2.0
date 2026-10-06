@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 align="center">Розрахунок палива</h2>
+    <div class="main">
+        <div class="po_km">
+            <h3 align="center">Розрахунок по кілометражу</h3>
+            <form action="">
+                <label for="">Розхід на 100км <span id="rozhid_km_txt"></span></label><br>
+                <input type="number" name="" id="rozhid_km"><br><br>
+                <label for="">Скільки % кілометрів по місту <span id="proc_misto_km_txt"></span> </label><br>
+                <input type="number" name="" id="proc_misto_km"><br><br>
+                <label for="">Скільки % кілометрів по шосе <span id="proc_shose_km_txt"></span></label><br>
+                <input type="number" name="" id="proc_shose_km"><br><br>
+                <label for="">Скільки % кілометрів по бездоріжжу <span id="proc_bezdor_km_txt"></span></label><br>
+                <input type="number" name="" id="proc_bezdor_km"><br><br>
+                <input type="button" value="Додати данні в формулу" onclick="vitrata_na_1km_po_km()"><br><br>
+                <label for="">Початковий пробіг</label><br>
+                <input type="number" name="" id="start_probig_km"><br><br>
+                <label for="">Кінцевий пробіг</label><br>
+                <input type="number" name="" id="end_probig_km"><br><br>
+                <label for="">Наявність палива на початку шляхівки</label><br>
+                <input type="number" name="" id="start_die_km"><br><br>
+                <label for="">Кількість заправленого палива</label><br>
+                <input type="number" name="" id="zapravka_die_km"><br><br>
+                <input type="button" value="Розрахувати" onclick="rahunok_po_km()">
+            </form>
+        </div>
+        <div class="po_die">
+             <h3 align="center">Розрахунок по кількості витраченого палива</h3>
+            <form action="">
+                <label for="">Розхід на 100км 
+                    <span id="rozhid_pal_txt"></span>
+                </label><br>
+                <input type="number" name="" id="rozhid_pal"><br><br>
+                <label for="">Скільки % палива по місту
+                    <span id="proc_misto_pal_txt"></span>
+                </label><br>
+                <input type="number" name="" id="proc_misto_pal"><br><br>
+                <label for="">Скільки % палива по шосе
+                    <span id="proc_shose_pal_txt"></span>
+                </label><br>
+                <input type="number" name="" id="proc_shose_pal"><br><br>
+                <label for="">Скільки % палива по бездоріжжу
+                    <span id="proc_bezdor_pal_txt"></span>
+                </label><br>
+                <input type="number" name="" id="proc_bezdor_pal"><br><br>
+                <input type="button" value="Додати данні в формулу" onclick="vitrata_na_1km_po_diesel()"><br><br>
+                <label for="">Початковий пробіг</label><br>
+                <input type="number" name="" id="start_probig_pal"><br><br>
+                <label for="">Наявність палива на початку шляхівки</label><br>
+                <input type="number" name="" id="start_die_pal"><br><br>
+                <label for="">Кількість заправленого палива</label><br>
+                <input type="number" name="" id="zapravka_die_pal"><br><br>
+                <label for="">Скільки залишити палива в баку</label><br>
+                <input type="number" name="" id="end_die_pal"><br><br>
+                <input type="button" value="Розрахувати" onclick="rahunok_po_diesel()">
+            </form>
+        </div>
+        <div class="table">
+            <h3 align="center">Результат розрахунку</h3>
+            <table id="rezultat" cellspacing="0">
+                
+            </table>
+            <div id="zadnik"></div>
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

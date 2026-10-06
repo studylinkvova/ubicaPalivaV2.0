@@ -1,0 +1,17 @@
+.main{
+    display: flex;
+    flex-direction: row;
+
+}
+.po_km{
+    border: 1px solid red;
+}
+.po_die{
+    border: 1px solid green;
+}
+.table{
+    border: 1px solid blue;
+}
+th, td{
+ border: 1px solid black;
+}
